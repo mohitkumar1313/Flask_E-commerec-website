@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="container-fluid hero-section d-flex align-items-center" style="height: 100vh;">
+    <div class="row w-100">
+        <!-- Text Section -->
+        <div class="col-md-6 text-center text-md-start p-5">
+            <h1 class="display-4 mb-3">Welcome to My Store</h1>
+            <p class="lead mb-4">Discover amazing products at unbeatable prices. Shop now to find what you love!</p>
+            <a href="/products" class="btn btn-primary btn-lg">Shop Now</a>
+        </div>
+        <!-- Image Section -->
+        <div class="col-md-6 d-none d-md-flex justify-content-center">
+            <img src="{{ url_for('static', filename='images/hero-image.png') }}" alt="Hero Image" class="img-fluid" style="max-height: 80%; max-width: 90%;">
+        </div>
+    </div>
+</div>
+
+<!-- Features Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Why Shop With Us?</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="feature text-center">
+                <h3>Quality Products</h3>
+                <p>We provide high-quality products that meet your needs.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="feature text-center">
+                <h3>Great Prices</h3>
+                <p>Our prices are competitive and offer great value for money.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="feature text-center">
+                <h3>Fast Shipping</h3>
+                <p>Enjoy quick and reliable shipping on all orders.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

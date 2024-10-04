@@ -1,0 +1,195 @@
+/* Base styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Modern font */
+    background-color: #f7f7f7; /* Light background color for better contrast */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+}
+
+/* Headings styles */
+h1, h2 {
+    color: #333;
+    margin-bottom: 20px; /* Spacing below headings */
+    text-align: center; /* Center headings for a cleaner look */
+}
+
+/* Bento Box styles */
+.bento-box {
+    position: relative;
+    overflow: hidden; /* Clip any overflow */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.bento-box:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+.bento-box img {
+    width: 100%; /* Full width image */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-top-left-radius: 15px; /* Rounded corners */
+    border-top-right-radius: 15px; /* Rounded corners */
+}
+
+/* Bento content styles */
+.bento-content {
+    padding: 15px; /* Padding for content */
+    background-color: #fff; /* Background color */
+    text-align: center; /* Centered text */
+    border-bottom-left-radius: 15px; /* Rounded corners */
+    border-bottom-right-radius: 15px; /* Rounded corners */
+}
+
+.bento-title {
+    font-size: 1.25rem; /* Title size */
+    margin: 0.5rem 0; /* Margin for spacing */
+    font-weight: bold; /* Bold title */
+}
+
+.bento-tag {
+    font-size: 0.9rem; /* Tag size */
+    color: #777; /* Tag color */
+}
+
+/* Price styles */
+.bento-price {
+    font-size: 1.1rem; /* Price size */
+    color: #333; /* Price color */
+    margin: 0.5rem 0; /* Margin for spacing */
+}
+
+/* Actual price with crossed-out effect */
+.actual-price {
+    text-decoration: line-through; /* Crossed-out line */
+    color: red; /* Red color for the original price */
+    margin-right: 0.5rem; /* Space between actual and discounted price */
+}
+
+/* Discounted price style */
+.discounted-price {
+    font-weight: bold; /* Bold for the discounted price */
+    color: green; /* Green color for the new price */
+}
+
+/* Custom button styles */
+.custom-btn {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: #fff; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded button */
+    padding: 10px 20px; /* Padding for button */
+    font-size: 1rem; /* Font size for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.custom-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight upward movement on hover */
+}
+
+/* Accessibility for buttons */
+.custom-btn:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.7); /* Custom focus outline */
+}
+
+/* Badge styles for discount notifications */
+.badge {
+    position: absolute; /* Position it at the top of the bento box */
+    top: 15px; /* Distance from the top */
+    left: 15px; /* Distance from the left */
+    background-color: #dc3545; /* Bootstrap danger color */
+    color: #fff; /* White text for contrast */
+    padding: 5px 10px; /* Padding for the badge */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 0.9rem; /* Font size */
+    z-index: 10; /* Ensure it appears above other content */
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+/* Table styles (if needed) */
+/*
+table {
+    margin-top: 20px;
+}
+*/
+
+
+/* Container for the upload form
+.container {
+    max-width: 600px; *//* Max width for the form container *//*
+    margin: 0 auto; *//* Center the container *//*
+    padding: 2rem; *//* Ample padding around the container *//*
+    background: #ffffff; *//* White background for the form *//*
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); *//* Subtle shadow for depth *//*
+    border-radius: 8px; *//* Rounded corners *//*
+}*/
+
+/* Form Elements */
+.upload-form .form-group {
+    margin-bottom: 1.5rem; /* Spacing between form elements */
+}
+
+label {
+    font-weight: bold; /* Bold labels */
+    margin-bottom: 0.5rem; /* Spacing below labels */
+    display: block; /* Block display for proper spacing */
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Slightly rounded corners */
+    padding: 10px; /* Padding inside inputs */
+    width: 100%; /* Full width for all inputs */
+    transition: border-color 0.3s; /* Smooth border color transition */
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    border-color: #007bff; /* Blue border on focus */
+    outline: none; /* Remove default outline */
+}
+
+input[type="file"] {
+    border: 1px solid #ccc; /* Light gray border for file input */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px; /* Padding inside the file input */
+    display: block; /* Block display for file input */
+}
+
+/* Custom button styles */
+.btn {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: #fff; /* White text */
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding for button */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight upward movement on hover */
+}
+
+/* Accessibility for buttons */
+.btn:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.7); /* Custom focus outline */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem; /* Reduced padding for smaller screens */
+    }
+}

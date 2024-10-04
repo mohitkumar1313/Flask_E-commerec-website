@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Our Products</h2>
+    <div class="row">
+        {% for product in products %}
+        <div class="col-md-4 mb-4">
+            <div class="bento-box">
+                <img src="{{ url_for('static', filename=product['image_path']) }}" alt="{{ product['name'] }}" class="img-fluid">
+                <div class="badge">{{ product['tag'] }}</div> <!-- Tag Badge -->
+                <div class="bento-content">
+                    <h5 class="bento-title">{{ product['name'] }}</h5>
+
+                    {% if product['discount'] > 0 %}
+                        <p class="bento-price">
+                            <span class="actual-price">${{ product['price'] }}</span>
+                            <span class="discounted-price">${{ (product['price']|float * (1 - product['discount']/100))|round(2) }}</span>
+                        </p>
+                    {% else %}
+                        <p class="bento-price">${{ product['price'] }}</p>
+                    {% endif %}
+
+                    <a href="#" class="btn btn-primary">View Product</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
