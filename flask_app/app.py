@@ -1,11 +1,20 @@
 from flask import Flask, render_template, request, redirect, url_for
 from pymongo import MongoClient
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
+#connecting mongoUsername and MongoPassword from .ebv directory
+db_username =os.environ["MONGODB_USERNAME"]
+db_password = os.environ["MONGODB_PASSWORD"]
+
+#print(db_username)
+#print(db_password)
 
 # MongoDB Atlas connection
-client = MongoClient('mongodb+srv://root:5mE3VQTCjz974Ftu@cluster0.mrzjz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+client = MongoClient(f'mongodb+srv://{db_username}:{db_password}@cluster0.mrzjz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 db = client['shop_db']
 products_collection = db['products']
 
