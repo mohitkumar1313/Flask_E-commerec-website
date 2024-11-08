@@ -38,6 +38,8 @@ products = [
     }
 ]
 
+
+
 # Clear existing products
 products_collection.delete_many({})  # Remove all existing products
 
