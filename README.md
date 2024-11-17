@@ -1,6 +1,6 @@
-Assignment 02: E-Commerce Flask Application
+# Assignment 02: E-Commerce Flask Application
 
-Objective: In this assignment, you will create a Flask web application with two routes:
+## Objective: In this assignment, you will create a Flask web application with two routes:
 • a homepage (/) and,
 • a products page (/products).
 
@@ -10,12 +10,12 @@ Flask app). You will use Jinja2 templates to create dynamic content and Bootstra
 styling the product page
 
 
-Recent changes: 
+# Recent changes: 
 
-Unit Tests Documentation
+## Unit Tests Documentation
 This project includes unit tests that validate the functionality of Flask routes and MongoDB operations. These tests ensure that the application behaves as expected, both for the user-facing API and interactions with the database.
 
-CI/CD Pipeline
+## CI/CD Pipeline
 The unit tests are automatically executed by GitHub Actions through the CI/CD pipeline. This automation ensures continuous testing of the application’s functionality and performance. The GitHub Actions pipeline is defined in the .github/workflows/ci.yml file. The tests are triggered on the following events:
 
 Push: Any push to the main branch triggers the tests to run.
@@ -32,7 +32,7 @@ MONGODB_USERNAME: MongoDB username for authentication.
 MONGODB_PASSWORD: MongoDB password for authentication.
 These secrets are used to connect securely to the MongoDB database during test execution. The credentials are never exposed in the codebase, ensuring sensitive information remains secure.
 
-Test Files
+## Test Files
 The unit tests are organized into separate files based on functionality:
 
 test_routes.py: Contains unit tests that validate the functionality of Flask routes. These tests ensure that the API routes return the expected status codes and content. For example, the tests verify that valid GET requests return a 200 OK response, and POST requests correctly create resources like users or products.
@@ -65,5 +65,5 @@ def test_mongo_connection(self):
         mongo_connected = False
     self.assertTrue(mongo_connected)
     client.close()
-Test Execution
+## Test Execution
 The tests are automatically triggered by any push to the main branch or any pull request targeting it. This ensures that the latest code changes are continuously tested.
