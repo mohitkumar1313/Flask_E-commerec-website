@@ -26,6 +26,6 @@ To run the tests that interact with MongoDB, ensure the following environment va
 
 ### Test Files
 - **`test_routes.py`**: Contains tests for Flask routes.
-- **test_database**: Includes reading (pinging the database) and writing (inserting documents) to MongoDB.
+- **test_database.py**: Includes reading (pinging the database) and writing (inserting documents) to MongoDB.
 
 The tests can be triggered by any push to the main branch or pull requests.
