@@ -13,7 +13,7 @@ db_username = os.environ["MONGODB_USERNAME"]
 db_password = os.environ["MONGODB_PASSWORD"]
 
 # MongoDB Atlas connection
-client = MongoClient(f'mongodb+srv://{db_username}:{db_password}@cluster0.mrzjz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+client = MongoClient(f'mongodb+srv://{db_username}:{db_password}@cluster0.yenus.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 db = client['shop_db']
 products_collection = db['products']
 
